@@ -1,0 +1,625 @@
+.navigation
+{
+  margin: 0;
+  padding: 0;
+
+  /* make it look decent enough */
+  background: ;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+a
+{
+  text-decoration: none;
+  color: rgb(30, 144, 255);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+a:hover
+{
+  color: tomato;
+}
+
+#menuToggle
+{
+  display: block;
+  position: fixed;
+  top: 3rem;
+  left: 2rem;
+
+  z-index: 1;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/*
+* Just a quick hamburger
+*/
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: black;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+  background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+  opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/*
+* Transform all the slices of hamburger
+* into a crossmark.
+*/
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+* But let's hide the middle one.
+*/
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+* Ohyeah and the last one should go the other direction
+*/
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+* Make this absolute positioned
+* at the top left of the screen
+*/
+#cssmenu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+
+
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#cssmenu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+* And let's slide it in from the left
+*/
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+  position: fixed;
+
+}
+
+.round {
+  border-radius: 100%;
+  display: inline-block;
+  box-shadow: 0px 0px 20px 7px rgba(0,0,0,0.14);
+  padding: 15px 10px 10px 10px
+}
+
+/*
+
+BURGER END
+
+*/
+
+html * {
+  font-family: 'Montserrat';
+}
+
+* p {
+  color: #d6d6d6;
+  line-height: 200%;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.large-font {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.image img {
+  max-width: 100%;
+}
+
+/* HEADER */
+
+.test img{
+  max-width: 100%;
+}
+
+.nav_div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_width {
+  width: 176px;
+}
+
+/* PADDING */
+
+.heading-container h2 {
+  padding-top: 1rem;
+}
+
+.footer-text {
+  padding-top: 1rem;
+}
+
+#carouselExampleIndicators {
+  padding-top: 50px;
+}
+
+h4 {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.padding {
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.small-text-below-red {
+  padding-bottom: 2rem;
+}
+
+.small-text-footer {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  color: silver;
+}
+
+.padding-small {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* TEXT N STUFF ANT KUMELIO */
+
+.background-container {
+  position: relative;
+}
+
+.background-container img {
+  max-width: 100% ;
+}
+
+.heading-container h1 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.small-text {
+  display: flex;
+  justify-content: center;
+  color: silver;
+}
+
+.st1 {
+  display: flex;
+  justify-content: center;
+}
+
+.sm1pad {
+  padding-top: 100px;
+}
+
+#button1, #button2  {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: rgb(30, 144, 255);
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  box-shadow: 0px 0px 20px 7px rgba(0,0,0,0.14);
+  padding: 15px 40px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* Little columns */
+
+ol {
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  width: 20%;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* CAROUSEL */
+
+.carousel-caption h5{
+  color: rgb(30, 144, 255);
+  font-weight: bold;
+}
+.carousel-caption p{
+  color: black;
+  line-height: 200%;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+.carousel-indicators li {
+  background-color: rgb(30, 144, 255);
+}
+.carousel-indicators .active {
+  background-color: #dc3545;
+}
+
+/* Img Boxes (PO KUMELIU) */
+
+.po-kumel {
+  margin-top: -100px;
+}
+
+.heading-container h2 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60px;
+  font-weight: bold;
+
+}
+.left-img-box {
+  display: flex;
+}
+
+.left-img img {
+  max-width: 100%;
+  margin-bottom: -3px;
+}
+
+.left-img{
+  width: 50%;
+}
+
+.text-container-right  {
+  width: 50%;
+  background-color: rgb(247,248,251);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-img-box {
+  display: flex;
+}
+
+.right-img-box img {
+  max-width: 100%;
+}
+
+.right-img {
+  width: 50%;
+}
+
+.text-container-left {
+  width: 50%;
+  background-color: rgb(247,248,251);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3px;
+}
+
+/* APP (1)ONE */
+.app1-with-text {
+  display: flex;
+}
+
+.app1-text {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app {
+  max-width: 100%;
+}
+
+.heading-container-blue {
+  text-align: center;
+}
+
+/* APP TWO */
+.app2-with-text {
+  display: flex;
+}
+
+.app2 {
+  max-width: 100%;
+}
+
+.app2text {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blue {
+  color: rgb(30, 144, 255);
+}
+
+/* GUY IMAGE*/
+
+.guy_section {
+  display: flex;
+  background-color: rgb(247,248,251);
+}
+
+.guy {
+  width: 50%;
+  max-width: 50%;
+
+}
+
+.guy_img {
+  max-width: 100%;
+}
+
+.guy-text {
+  width: 50%;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.red-text h3{
+  color: red;
+  padding-top: 1rem;
+  font-weight: bold;
+}
+
+.name-text {
+  font-weight: bold;
+}
+
+.footer-text {
+  display: flex;
+  justify-content: center;
+}
+
+/* CONTACT */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact input, .input_ta {
+  border: none;
+  background: none;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  box-shadow: 0px 0px 20px 7px rgba(0,0,0,0.14);
+  padding: 15px 40px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.contact .submit {
+  cursor: pointer;
+  color: rgb(30, 144, 255);
+}
+
+.contact_send {
+  display: flex;
+  justify-content: center;
+}
+
+/* NEED TO SORT */
+
+.buttons {
+  text-align: center;
+  padding-bottom: 15px;
+  padding-top: 80px;
+}
+
+.map {
+  display: none;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0;
+  right: 0;
+}
+
+.show {
+  display: block;
+}
+
+.image_map {
+  max-width: 100%;
+  position: relative;
+}
+
+#map_button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: rgb(30, 144, 255);
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  box-shadow: 0px 0px 20px 7px rgba(0,0,0,0.14);
+  padding: 15px 40px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+
+
+
+
+@media all and (max-width:768px)  {
+
+  /* LEFT IMAGE SNOW FOREST */
+  .left-img-box {
+    display: block;
+  }
+  .left-img {
+    width: 100%;
+  }
+  .text-container-right {
+    width: 100%;
+  }
+
+  /* RIGHT IMAGE STACKED LOGS */
+
+  .right-img-box {
+    flex-direction: column-reverse;
+  }
+  .right-img-box img{
+    margin-bottom: -3px;
+  }
+  .right-img {
+    width: 100%;
+  }
+  .text-container-left {
+    width: 100%;
+  }
+
+  /* APP ONE */
+  .app1-with-text {
+    display: block;
+  }
+  .background-image {
+    width: 100%;
+  }
+  .app1-text {
+    width: 100%;
+  }
+
+  /* APP TWO */
+  .app2-with-text {
+    flex-direction: column-reverse;
+  }
+  .background-image2 {
+    width: 100%;
+  }
+  .app2text {
+    width: 100%;
+  }
+  /* GUY */
+  .guy_section {
+    display: block;
+  }
+  .guy {
+    width: 100%;
+    max-width: 100%;
+  }
+  .guy-text {
+    width: 100%;
+    max-width: 100%;
+  }
+  .location {
+    padding-bottom : 2rem;
+  }
+
+  /* NAV */
+
+  #menuToggle
+  {
+    display: block;
+    position: fixed;
+    top: 0.75rem;
+    left: 0.5rem;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+}
